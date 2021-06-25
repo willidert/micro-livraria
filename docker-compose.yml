@@ -1,0 +1,23 @@
+version: "3"
+services:
+  web:
+    build: ./services/frontend
+    container_name: web
+    ports:
+      - "5000:5000"
+  inventory:
+    build: ./services/inventory
+    container_name: inventory
+    ports:
+    - "3002:3002"
+  shipping:
+    build: ./services/shipping
+    container_name: shipping
+    ports:
+    - "3001:3001"
+  controller:
+    build: ./services/controller
+    container_name: controller
+    ports:
+        - "3000:3000"
+  
